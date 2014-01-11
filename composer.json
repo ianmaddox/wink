@@ -1,0 +1,18 @@
+{
+    "name": "ianmaddox/wink",
+    "version": "0.0.1",
+    "description": "A PHP library for Quirky's Wink service.",
+    "license": "TBD",
+    "authors": [
+        {
+            "name": "Ian Maddox",
+            "email": "github@ianmaddox.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {"ianmaddox\\wink\\": "src/"}
+    }
+}
