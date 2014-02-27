@@ -82,7 +82,7 @@ class nimbusDial extends \ianmaddox\wink\device {
 	 * Sets the needle to any angle.  Will switch the mode to manual.
 	 * 
 	 * @param int $deg
-	 * @return type
+	 * @return array
 	 */
 	public function setDegrees($deg) {
 		// Normalize the input.
@@ -96,6 +96,23 @@ class nimbusDial extends \ianmaddox\wink\device {
 		);
 	}
 
+	/**
+	 * 
+	 * @param float $val
+	 * @param float $min
+	 * @param float $max
+	 * @return array
+	 */
+	public function setNeedleValue($val, $min, $max) {
+		$val = $val - $min;
+		$max = $max - $min;
+		$percent = $val / $max;
+		$deg = $percent * 360;
+		$deg = $deg > 360 ? 360 : $deg; 
+		$deg = $deg < 0 ? 0 : $deg;
+		return $this->setDegrees($deg);
+	}
+	
 	/**
 	 * Set the main display and alternate display text for the dial
 	 * 
