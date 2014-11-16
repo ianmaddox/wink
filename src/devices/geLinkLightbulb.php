@@ -43,7 +43,7 @@ class geLinkLightbulb extends \ianmaddox\wink\device {
 			return false;
 		}
 
-		if ($brightness < 1.0 || $powered > 1.0) {
+		if ($brightness < 0.0 || $brightness > 1.0) {
 			trigger_error("The GE Link Bulb only has the range 0.0 through 1.0 as an accepted brightness levels. Cannot change desired brightness level on bulb to '$brightness'", E_USER_WARNING);
 			return false;
 		}
