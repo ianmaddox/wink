@@ -28,6 +28,7 @@ class wink {
 	const DEVICE_PIVOTPOWERGENIUS = 'pivotPowerGenius';
 	const DEVICE_PORKFOLIO = 'porkfolio';
 	const DEVICE_SPOTTER = 'spotter';
+	const DEVICE_GELINK_LIGHTBULB = 'geLinkLightbulb';
 
 	private $access_token;
 	private $refresh_token;
@@ -38,7 +39,8 @@ class wink {
 		'eggtray_id' => self::DEVICE_EGGMINDER,
 		'powerstrip_id' => self::DEVICE_PIVOTPOWERGENIUS,
 		'piggy_bank_id' => self::DEVICE_PORKFOLIO,
-		'sensor_pod_id' => self::DEVICE_SPOTTER
+		'sensor_pod_id' => self::DEVICE_SPOTTER,
+		'light_bulb_id' => self::DEVICE_GELINK_LIGHTBULB
 	);
 	
 	private $debug = 1;
